@@ -1,1 +1,4 @@
 Add Loops and Iteration
+for game in video_game_sales:
+    if game[GLOBAL_SALES] >= 25.0:
+        print(game[NAME])

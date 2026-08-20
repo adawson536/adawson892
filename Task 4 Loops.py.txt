@@ -2,3 +2,26 @@ Add Loops and Iteration
 for game in video_game_sales:
     if game[GLOBAL_SALES] >= 25.0:
         print(game[NAME])
+for game in video_game_sales:
+    if game[YEAR] < 2000:
+        pre_2000_count = pre_2000_count+1   
+print(pre_2000_count)
+for game in video_game_sales:
+    NA_total_sales = NA_total_sales + game[NA_SALES]
+    JP_total_sales = JP_total_sales + game[JP_SALES]
+
+print(NA_total_sales)
+print(JP_total_sales)
+
+if NA_total_sales > JP_total_sales:
+    print(f"North America had higher sales.")
+    
+elif NA_total_sales < JP_total_sales:
+    print(f"Japan had higher sales.")
+
+nintendo_games = []
+for games in video_game_sales: 
+    if games[PUBLISHER] == "Nintendo":
+        nintendo_games.append(games[NAME])
+
+print(nintendo_games)
